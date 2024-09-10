@@ -1,0 +1,39 @@
+.coin-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  }
+  
+  .coin-denomination {
+    font-size: 16px;
+    margin-right: 10px;
+    min-width: 60px;
+  }
+  
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .quantity-control button {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .quantity-control input {
+    width: 40px;
+    text-align: center;
+    margin: 0 5px;
+  }
+  
+  .coin-total {
+    font-size: 16px;
+    min-width: 60px;
+  }
+
+  .coin-amount-input {
+    min-width: 80px;
+  }
+  

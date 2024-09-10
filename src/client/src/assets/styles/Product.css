@@ -1,0 +1,84 @@
+.app-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  
+  .filters label {
+    font-weight: bold;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 150px !important;
+    height: 200px !important;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .product-card h3 {
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    width: 200px; 
+    height: 40px;
+    text-align: center;
+}
+
+.button.available {
+    background-color: orange;
+    color: white;
+}
+
+.button.selected {
+    background-color: green;
+    color: white;
+}
+
+.button.disabled {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+}
+
+  .selected-product {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+
+  .filter-celect-btn-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
