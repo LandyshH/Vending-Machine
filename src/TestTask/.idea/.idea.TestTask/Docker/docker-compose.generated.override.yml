@@ -1,0 +1,40 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.8"
+services:
+  migrate:
+    build:
+      context: "/Users/dusalimov/Downloads/Telegram Desktop/TestTask"
+      dockerfile: "./WebApi/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/WebApi.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "webapi:dev"
+    ports: []
+    volumes:
+    - "/Users/dusalimov/.nuget/packages:/home/app/.nuget/packages"
+    - "/Users/dusalimov/Downloads/Telegram Desktop/TestTask/WebApi:/app:rw"
+    - "/Users/dusalimov/Downloads/Telegram Desktop/TestTask:/src:rw"
+    working_dir: "/app"
+  s3-uploader:
+    build:
+      context: "/Users/dusalimov/Downloads/Telegram Desktop/TestTask"
+      dockerfile: "./ImageUploadService/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/ImageUploadService.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "imageuploadservice:dev"
+    ports: []
+    volumes:
+    - "/Users/dusalimov/.nuget/packages:/home/app/.nuget/packages"
+    - "/Users/dusalimov/Downloads/Telegram Desktop/TestTask/ImageUploadService:/app:rw"
+    - "/Users/dusalimov/Downloads/Telegram Desktop/TestTask:/src:rw"
+    working_dir: "/app"
